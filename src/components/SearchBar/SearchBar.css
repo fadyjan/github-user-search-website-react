@@ -1,0 +1,85 @@
+#SearchBar {
+  width: 100%;
+  flex-basis: 40%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 18px;
+}
+.SearchBarDark {
+  background-color: #1e2a47;
+}
+.SearchBarLight {
+  background-color: #fefefe;
+}
+#SearchInputField {
+  font-size: 18px;
+  font-family: "SpaceMonoRegular";
+  border: none;
+  height: 87%;
+  color: white;
+  flex-basis: 70%;
+}
+.SearchInputFieldDark {
+  background-color: #1e2a47;
+}
+.SearchInputFieldLight {
+  background-color: #fefefe;
+}
+.SearchInputFieldDark::placeholder {
+  color: #ffffff;
+}
+.SearchInputFieldLight::placeholder {
+  color: #4b6a9b;
+}
+#SearchInputField:focus {
+  outline: none;
+}
+#SearchInputField::placeholder {
+  font-size: 18px;
+  font-family: "SpaceMonoRegular";
+}
+#SearchButton {
+  color: white;
+  font-size: 16px;
+  background-color: #0079ff;
+  font-family: "SpaceMonoBold";
+  border-radius: 15px;
+  flex-basis: 12%;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#IconWithInput {
+  flex-basis: 70%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+#SearchIcon {
+  margin-left: 6%;
+  margin-right: 6%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  #SearchBar {
+    flex-basis: 34%;
+  }
+  #SearchButton {
+    flex-basis: 23%;
+  }
+}
+
+#Sucess{
+    color: rgb(31, 196, 31);
+    margin: auto;
+}
+
+#Error{
+    color: rgb(231, 75, 75);
+    margin: auto;
+}
