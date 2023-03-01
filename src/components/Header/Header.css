@@ -1,0 +1,35 @@
+#HeaderWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.DarkHeaderWrapper{
+    background-color: #141D2F;
+
+}
+
+.LightHeaderWrapper{
+    background-color: #F6F8FF;
+
+}
+#divFinderDark{
+    color: white;
+}
+
+#divFinderLight{
+    color: #222731;
+}
+#LightwithIcon{
+    cursor: pointer;
+    flex-basis: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#LightwithIcon h1{
+    font-size: 13px;
+    color: #90A4D4;
+}
