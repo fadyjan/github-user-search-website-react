@@ -1,0 +1,52 @@
+:root {
+    --loading-grey: #ededed;
+    --loading-black: #253149;
+
+}
+
+  .Lightloading,
+  .Lightloading .image,
+  .Lightloading label,
+  .Lightloading h1,
+  .Lightloading a,
+  .Lightloading .description {
+    color: transparent;
+    background-color: var(--loading-grey);
+    background: linear-gradient(
+      100deg,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(255, 255, 255, .5) 50%,
+      rgba(255, 255, 255, 0) 60%
+    ) var(--loading-grey);
+    background-size: 200% 100%;
+    background-position-x: 180%;
+    animation: 1s loading ease-in-out infinite;
+    animation-delay: .05s;
+
+  }
+  .Darkloading,
+  .Darkloading .image,
+  .Darkloading label,
+  .Darkloading h1,
+  .Darkloading a,
+  .Darkloading .description {
+    color: transparent;
+    background-color: var(--loading-black);
+    background: linear-gradient(
+      100deg,
+      rgba(255, 255, 255, 0) 40%,
+      rgba(68, 102, 157, 0.5) 50%,
+      rgba(255, 255, 255, 0) 60%
+    ) var(--loading-black);
+    background-size: 200% 100%;
+    background-position-x: 180%;
+    animation: 1s loading ease-in-out infinite;
+    animation-delay: .05s;
+
+  }
+  
+  @keyframes loading {
+    to {
+      background-position-x: -20%;
+    }
+  }
