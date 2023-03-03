@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import { useState ,createContext } from "react";
+import "./App.css";
+import Header from "./components/Header/Header";
+import SearchBar from "./components/SearchBar/SearchBar";
+import GitHubInfo from "./components/GitHubInfo/GitHubInfo";
+import LoadingGitHubInfo from "./components/LoadingGitHubInfo/LoadingGitHubInfo";
+
+export const ThemeContext = createContext(null)
+export const UserData = createContext(null)
 
 function App() {
+  const [theme, setTheme] = useState('Dark');
+  const [user,setUser] =useState("")
+
+  const toggleTheme = ()=>{
+    setTheme((currentTheme)=>(currentTheme === "Light"? "Dark" : "Light"))
+  }
+  const PrepareUserData = (u)=>{
+    setUser(u)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <ThemeContext.Provider value={{theme ,toggleTheme }}>
+      <UserData.Provider value = {{user, PrepareUserData}}>
+    <div className={"App " + theme+"App"}>
+      <div id="InnerWrapper">
+        <div id="HeaderWithSearch">
+          <Header></Header>
+          <SearchBar></SearchBar>
+        </div>
+        <GitHubInfo></GitHubInfo>
+      </div>
     </div>
+    </UserData.Provider>
+    </ThemeContext.Provider>
   );
 }
 
