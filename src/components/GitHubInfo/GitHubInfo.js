@@ -52,6 +52,7 @@ const GitHubInfo = () => {
   const MobileView = () => {
     return (
       <div id="MobileViewInfoWrapper">
+        {User.user && (
         <div id="ImgWrapperMobView">
           {
             <img
@@ -61,6 +62,7 @@ const GitHubInfo = () => {
             ></img>
           }
         </div>
+        )}
 
         <div id="UserNameWrapper">
           {User.user && (
@@ -70,7 +72,7 @@ const GitHubInfo = () => {
               </h1>
               <a id="AnchorUserName">{User.user.data.login}</a>
               <label className={"UserNameLabel" + themeObjectContext.theme}>
-                {User.user.data.created_at}
+              Joined {date}
               </label>
             </>
           )}
