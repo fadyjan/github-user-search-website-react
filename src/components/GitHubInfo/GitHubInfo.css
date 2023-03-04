@@ -152,6 +152,9 @@
   #RightPart {
     flex-basis: 100%;
   }
+  #ParagrapheWrapper{
+    margin-left: 6%;
+  }
 
   #UserNameWrapper {
     flex-direction: column;

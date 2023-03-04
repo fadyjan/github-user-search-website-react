@@ -66,11 +66,22 @@
 }
 
 @media (max-width: 800px) {
+  #IconWithInput{
+    width: 50%;
+  }
   #SearchBar {
     flex-basis: 34%;
   }
   #SearchButton {
     flex-basis: 23%;
+    margin: 1px;
+  }
+  #SearchInputField{
+    width: 70%;
+  }
+  #SearchInputField::placeholder {
+    font-size: 12px;
+    font-family: "SpaceMonoRegular";
   }
 }
 
