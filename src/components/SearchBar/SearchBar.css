@@ -7,23 +7,27 @@
 }
 .SearchBarDark {
   background-color: #1e2a47;
+
 }
 .SearchBarLight {
   background-color: #fefefe;
+
 }
 #SearchInputField {
   font-size: 18px;
   font-family: "SpaceMonoRegular";
   border: none;
   height: 87%;
-  color: white;
+
   flex-basis: 70%;
 }
 .SearchInputFieldDark {
   background-color: #1e2a47;
+  color: white;
 }
 .SearchInputFieldLight {
   background-color: #fefefe;
+  color: #4b6a9b
 }
 .SearchInputFieldDark::placeholder {
   color: #ffffff;
